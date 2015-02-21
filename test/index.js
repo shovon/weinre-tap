@@ -22,4 +22,24 @@ describe('injectWeinreIfHTML', function () {
         done();
       });
   });
+
+  it(
+    'should fail to inject weinre if the specified HTML file lacks a body tag',
+    function (done) {
+      var filepath = path.join(__dirname, 'fixtures', 'bad.html');
+      var hostname = 'host';
+      var port     = 9090;
+      helpers
+        .injectWeinreIfHTML(filepath, hostname, port, function (err, data) {
+          if (err) { throw err; }
+          debug('HTML: %s', data);
+          var src =
+            'http://' + hostname + ':' + port + helpers.TARGET_SCRIPT_PATH;
+          var $ = cheerio.load(data);
+          var $script = $('script');
+          expect($script.length).to.be(0);
+          done();
+        });
+    }
+  )
 });
