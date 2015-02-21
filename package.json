@@ -22,7 +22,7 @@
   "people": [
     "Salehen Shovon Rahman <salehen.rahman@gmail.com> (http://shovon.github.io)"
   ],
-  "bin": "./bin/weinre-tap",
+  "bin": "./weinre-tap",
   "repository": {
     "type": "git",
     "url": "http://github.com/shovon/weinre-tap.git"
