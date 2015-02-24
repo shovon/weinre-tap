@@ -19,13 +19,19 @@ weinre.stderr.pipe(process.stderr);
 var app = express();
 
 app.use(function (req, res, next) {
-  if (req.path === '/' || path.extname(req.path).toLowerCase() === '.html') {
+  console.log(req.path, req.path[req.path.length - 1]);
+  if (req.path[req.path.length - 1] === '/' || path.extname(req.path).toLowerCase() === '.html') {
+    var p = req.path;
+    if (p[p.length - 1] === '/') {
+      p += 'index.html';
+    }
     helpers
       .injectWeinreIfHTML(
-        path.join(process.cwd(), req.path),
+        path.join(process.cwd(), p),
         req.hostname,
         weinrePort,
         function (err, data) {
+          console.log('Good');
           if (err) { return next(); }
           res.set('Content-Type', 'text/html').send(data);
         }

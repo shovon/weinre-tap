@@ -1,6 +1,6 @@
 {
   "name": "weinre-tap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "In just one command, test your static mobile app remotely",
   "keywords": [
     "weinre",
