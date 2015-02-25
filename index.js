@@ -19,7 +19,6 @@ weinre.stderr.pipe(process.stderr);
 var app = express();
 
 app.use(function (req, res, next) {
-  console.log(req.path, req.path[req.path.length - 1]);
   if (req.path[req.path.length - 1] === '/' || path.extname(req.path).toLowerCase() === '.html') {
     var p = req.path;
     if (p[p.length - 1] === '/') {
@@ -31,7 +30,6 @@ app.use(function (req, res, next) {
         req.hostname,
         weinrePort,
         function (err, data) {
-          console.log('Good');
           if (err) { return next(); }
           res.set('Content-Type', 'text/html').send(data);
         }
