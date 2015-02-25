@@ -9,7 +9,7 @@ cd /path/to/static/mobile/app
 weinre-tap
 ```
 
-Then open your mobile browser to you're machine's IP address
+Then open your mobile browser to your machine's IP address
 
 ## Installing
 
