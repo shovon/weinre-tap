@@ -1,6 +1,6 @@
 {
   "name": "weinre-tap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "In just one command, test your static mobile app remotely",
   "keywords": [
     "weinre",
@@ -14,13 +14,13 @@
   "homepage": "https://github.com/shovon/weinre-tap",
   "bugs": {
     "url": "https://github.com/shovon/weinre-tap/issues",
-    "email": "salehen.rahman@gmail.com"
+    "email": "sal@linux.com"
   },
   "license": {
     "license": "MIT"
   },
   "people": [
-    "Salehen Shovon Rahman <salehen.rahman@gmail.com> (http://shovon.github.io)"
+    "Salehen Shovon Rahman <sal@linux.com> (http://shovon.github.io)"
   ],
   "bin": "./weinre-tap",
   "repository": {
